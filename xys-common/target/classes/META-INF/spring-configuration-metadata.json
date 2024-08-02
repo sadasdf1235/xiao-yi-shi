@@ -1,0 +1,121 @@
+{
+  "groups": [
+    {
+      "name": "xiaoyishi.alioss",
+      "type": "shop.xiaoyishi.properties.AliOssProperties",
+      "sourceType": "shop.xiaoyishi.properties.AliOssProperties"
+    },
+    {
+      "name": "xiaoyishi.jwt",
+      "type": "shop.xiaoyishi.properties.JwtProperties",
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat",
+      "type": "shop.xiaoyishi.properties.WeChatProperties",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "xiaoyishi.alioss.access-key-id",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.AliOssProperties"
+    },
+    {
+      "name": "xiaoyishi.alioss.access-key-secret",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.AliOssProperties"
+    },
+    {
+      "name": "xiaoyishi.alioss.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.AliOssProperties"
+    },
+    {
+      "name": "xiaoyishi.alioss.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.AliOssProperties"
+    },
+    {
+      "name": "xiaoyishi.jwt.admin-secret-key",
+      "type": "java.lang.String",
+      "description": "管理端员工生成jwt令牌相关配置",
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties"
+    },
+    {
+      "name": "xiaoyishi.jwt.admin-token-name",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties"
+    },
+    {
+      "name": "xiaoyishi.jwt.admin-ttl",
+      "type": "java.lang.Long",
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "xiaoyishi.jwt.user-secret-key",
+      "type": "java.lang.String",
+      "description": "用户端微信用户生成jwt令牌相关配置",
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties"
+    },
+    {
+      "name": "xiaoyishi.jwt.user-token-name",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties"
+    },
+    {
+      "name": "xiaoyishi.jwt.user-ttl",
+      "type": "java.lang.Long",
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "xiaoyishi.wechat.api-v3-key",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat.appid",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat.mch-serial-no",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat.mchid",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat.notify-url",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat.private-key-file-path",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat.refund-notify-url",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat.secret",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    },
+    {
+      "name": "xiaoyishi.wechat.we-chat-pay-cert-file-path",
+      "type": "java.lang.String",
+      "sourceType": "shop.xiaoyishi.properties.WeChatProperties"
+    }
+  ],
+  "hints": []
+}

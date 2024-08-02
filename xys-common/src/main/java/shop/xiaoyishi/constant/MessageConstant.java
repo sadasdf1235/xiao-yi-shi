@@ -5,6 +5,7 @@ package shop.xiaoyishi.constant;
  */
 public class MessageConstant {
 
+    public static final String REGISTER_SUCCESS = "注册成功";
     public static final String PASSWORD_ERROR = "密码错误";
 
     public static final String ALREADY_EXISTS = "已存在";

@@ -1,7 +1,7 @@
 package shop.xiaoyishi.config;
 
-import com.sky.properties.AliOssProperties;
-import com.sky.utils.AliOssUtil;
+import shop.xiaoyishi.properties.AliOssProperties;
+import shop.xiaoyishi.utils.AliOssUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
