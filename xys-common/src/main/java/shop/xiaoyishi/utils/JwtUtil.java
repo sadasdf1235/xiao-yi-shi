@@ -39,9 +39,9 @@ public class JwtUtil {
         SecretKey key = Keys.hmacShaKeyFor(secretKey.getBytes());
 
         return Jwts.builder()
-                .setClaims(claims)
-                .setIssuedAt(exp)
-                .setExpiration(exp)
+                .claims(claims)
+                .issuedAt(exp)
+                .expiration(exp)
                 .signWith(key)
                 .compact();
     }
