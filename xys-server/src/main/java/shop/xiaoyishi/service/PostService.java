@@ -10,5 +10,15 @@ public interface PostService {
      */
     Integer countPost(Long userId);
 
+    /**
+     * 帖子列表
+     * @return
+     */
     List<PostVO> postList();
+
+    /**
+     * 用户帖子列表
+     * @return
+     */
+    List<PostVO> postListById(Long id);
 }
