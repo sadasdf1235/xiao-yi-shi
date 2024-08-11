@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="shop.xiaoyishi.mapper.CommodityMapper">
+
+    <insert id="addCommodity" useGeneratedKeys="true" keyProperty="commodityId">
+        INSERT INTO commodity(user_id, title, description, location, category_id, update_time, price, is_deleted)
+        VALUES (#{userId}, #{title}, #{description}, #{location}, #{categoryId}, #{updateTime}, #{price}, #{isDeleted})
+    </insert>
+
+    <insert id="addCommodityImages">
+        insert into commodity_images (commodity_id,image_url)
+        values
+        <foreach collection="images" item="image" separator=",">
+            (#{id},#{image})
+        </foreach>
+    </insert>
+</mapper>

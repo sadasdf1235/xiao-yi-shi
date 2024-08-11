@@ -71,7 +71,9 @@ shop\xiaoyishi\entity\User.class
 shop\xiaoyishi\dto\EmployeeDTO.class
 shop\xiaoyishi\dto\OrdersDTO.class
 shop\xiaoyishi\vo\BusinessDataVO.class
+shop\xiaoyishi\dto\CommodityDTO.class
 shop\xiaoyishi\entity\AddressBook.class
+shop\xiaoyishi\vo\CategoryVO.class
 shop\xiaoyishi\entity\OrderDetail.class
 shop\xiaoyishi\vo\OrderVO.class
 shop\xiaoyishi\vo\SetmealVO.class

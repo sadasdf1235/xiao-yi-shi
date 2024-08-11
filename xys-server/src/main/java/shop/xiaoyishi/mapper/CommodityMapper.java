@@ -1,7 +1,10 @@
 package shop.xiaoyishi.mapper;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import shop.xiaoyishi.dto.CommodityDTO;
 import shop.xiaoyishi.entity.Commodity;
 import shop.xiaoyishi.vo.CommodityVO;
 
@@ -30,4 +33,8 @@ public interface CommodityMapper {
 
     @Select("select c.image_url from commodity_images c where commodity_id = #{id}")
     List<String> getImagesById(Long id);
+
+    void addCommodity(Commodity commodity);
+
+    void addCommodityImages(@Param("images")List<String> images, @Param("id")Long id);
 }

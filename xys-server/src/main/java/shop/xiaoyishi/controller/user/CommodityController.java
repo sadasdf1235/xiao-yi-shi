@@ -4,9 +4,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import shop.xiaoyishi.dto.CommodityDTO;
 import shop.xiaoyishi.entity.Commodity;
 import shop.xiaoyishi.result.Result;
 import shop.xiaoyishi.service.CommodityService;
@@ -45,4 +44,15 @@ public class CommodityController {
         return Result.success(commodities);
     }
 
+    /**
+     * 查询商品列表
+     * @return
+     */
+    @PostMapping("/addCommodity")
+    @ApiOperation("添加商品")
+    public Result addCommodity(@RequestBody CommodityDTO commodityDTO){
+        log.info("添加商品{}",commodityDTO);
+        commodityService.addCommodity(commodityDTO);
+        return Result.success();
+    }
 }

@@ -1,5 +1,6 @@
 package shop.xiaoyishi.service;
 
+import shop.xiaoyishi.dto.CommodityDTO;
 import shop.xiaoyishi.entity.Commodity;
 import shop.xiaoyishi.vo.CommodityVO;
 
@@ -18,4 +19,6 @@ public interface CommodityService {
      * @return
      */
     List<CommodityVO> getList();
+
+    void addCommodity(CommodityDTO commodityDTO);
 }
