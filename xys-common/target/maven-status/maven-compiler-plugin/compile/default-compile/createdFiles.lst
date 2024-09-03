@@ -1,6 +1,7 @@
 shop\xiaoyishi\exception\LoginFailedException.class
 shop\xiaoyishi\constant\JwtClaimsConstant.class
 shop\xiaoyishi\context\BaseContext.class
+shop\xiaoyishi\constant\CollectType.class
 META-INF\spring-configuration-metadata.json
 shop\xiaoyishi\constant\StatusConstant.class
 shop\xiaoyishi\exception\UserNotLoginException.class

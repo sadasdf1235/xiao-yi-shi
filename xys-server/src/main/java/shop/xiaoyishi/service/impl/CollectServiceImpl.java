@@ -13,6 +13,7 @@ import shop.xiaoyishi.vo.PostVO;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @Slf4j
@@ -39,6 +40,7 @@ public class CollectServiceImpl implements CollectService {
      */
     public List<CommodityVO> collectCommodity(Long id) {
         List<Long> longs = collectMapper.collectCommodity(id);
+        longs.removeIf(Objects::isNull);
         if(longs.isEmpty()){
             return null;
         }
@@ -60,6 +62,7 @@ public class CollectServiceImpl implements CollectService {
      */
     public List<PostVO> collectPost(Long id) {
         List<Long> longs = collectMapper.collectPost(id);
+        longs.removeIf(Objects::isNull);
         if(longs.isEmpty()){
             return null;
         }
