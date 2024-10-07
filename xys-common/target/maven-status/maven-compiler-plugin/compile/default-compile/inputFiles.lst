@@ -15,6 +15,7 @@ D:\Project\xiao-yi-shi\xys-common\src\main\java\shop\xiaoyishi\exception\OrderBu
 D:\Project\xiao-yi-shi\xys-common\src\main\java\shop\xiaoyishi\exception\SetmealEnableFailedException.java
 D:\Project\xiao-yi-shi\xys-common\src\main\java\shop\xiaoyishi\utils\JwtUtil.java
 D:\Project\xiao-yi-shi\xys-common\src\main\java\shop\xiaoyishi\constant\AutoFillConstant.java
+D:\Project\xiao-yi-shi\xys-common\src\main\java\shop\xiaoyishi\constant\CollectType.java
 D:\Project\xiao-yi-shi\xys-common\src\main\java\shop\xiaoyishi\properties\JwtProperties.java
 D:\Project\xiao-yi-shi\xys-common\src\main\java\shop\xiaoyishi\exception\AddressBookBusinessException.java
 D:\Project\xiao-yi-shi\xys-common\src\main\java\shop\xiaoyishi\exception\DeletionNotAllowedException.java

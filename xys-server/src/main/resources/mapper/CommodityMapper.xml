@@ -4,8 +4,8 @@
 <mapper namespace="shop.xiaoyishi.mapper.CommodityMapper">
 
     <insert id="addCommodity" useGeneratedKeys="true" keyProperty="commodityId">
-        INSERT INTO commodity(user_id, title, description, location, category_id, update_time, price, is_deleted)
-        VALUES (#{userId}, #{title}, #{description}, #{location}, #{categoryId}, #{updateTime}, #{price}, #{isDeleted})
+        INSERT INTO commodity(user_id, title, description, location, category_id, update_time, price, is_deleted,is_sold)
+        VALUES (#{userId}, #{title}, #{description}, #{location}, #{categoryId}, #{updateTime}, #{price}, #{isDeleted}, #{isSold})
     </insert>
 
     <insert id="addCommodityImages">

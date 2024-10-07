@@ -32,4 +32,16 @@ public class PostController {
         List<PostVO> postVOS = postService.postList();
         return Result.success(postVOS);
     }
+
+    /**
+     * 用户帖子列表
+     * @return
+     */
+    @GetMapping("/userPostList")
+    @ApiOperation("用户帖子列表")
+    public Result postListById(Long id){
+        log.info("查询用户帖子列表");
+        List<PostVO> postVOS = postService.postListById(id);
+        return Result.success(postVOS);
+    }
 }

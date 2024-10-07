@@ -7,14 +7,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import shop.xiaoyishi.dto.CommodityDTO;
 import shop.xiaoyishi.entity.Commodity;
-import shop.xiaoyishi.entity.User;
 import shop.xiaoyishi.mapper.CommodityMapper;
 import shop.xiaoyishi.mapper.UserMapper;
 import shop.xiaoyishi.service.CommodityService;
 import shop.xiaoyishi.vo.CommodityVO;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -25,6 +23,9 @@ public class CommodityServiceImpl implements CommodityService {
     @Autowired
     private UserMapper userMapper;
     @Override
+    /**
+     * 通过用户id获取商品列表
+     */
     public List<CommodityVO> getByUserId(Long userId) {
         List<CommodityVO> commodityVOList = commodityMapper.getByUserId(userId);
         for (CommodityVO commodityVO : commodityVOList) {
@@ -35,6 +36,9 @@ public class CommodityServiceImpl implements CommodityService {
     }
 
     @Override
+    /**
+     * 获取商品列表
+     */
     public List<CommodityVO> getList() {
         List<CommodityVO> commodityVOList = commodityMapper.getList();
         for (CommodityVO commodityVO : commodityVOList) {
@@ -46,14 +50,20 @@ public class CommodityServiceImpl implements CommodityService {
 
     @Override
     @Transactional
+    /**
+     * 添加商品
+     */
     public void addCommodity(CommodityDTO commodityDTO) {
         Commodity commodity = new Commodity();
         BeanUtils.copyProperties(commodityDTO,commodity);
         commodity.setUpdateTime(LocalDateTime.now());
         commodity.setIsDeleted(0);
+        commodity.setIsSold(0);
         commodityMapper.addCommodity(commodity);
-        log.info("id----{}",commodity.getCommodityId());
-        commodityMapper.addCommodityImages(commodityDTO.getImages(),commodity.getCommodityId());
+        List<String> images = commodityDTO.getImages();
+        if(images != null && !images.isEmpty()){
+            commodityMapper.addCommodityImages(images,commodity.getCommodityId());
+        }
     }
 
     @Override
