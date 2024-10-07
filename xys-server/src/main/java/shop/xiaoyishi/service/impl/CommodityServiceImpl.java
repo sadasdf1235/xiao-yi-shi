@@ -55,4 +55,9 @@ public class CommodityServiceImpl implements CommodityService {
         log.info("id----{}",commodity.getCommodityId());
         commodityMapper.addCommodityImages(commodityDTO.getImages(),commodity.getCommodityId());
     }
+
+    @Override
+    public Commodity getCommodity(Long commodityId) {
+        return commodityMapper.getCommodity(commodityId);
+    }
 }

@@ -2,6 +2,7 @@ package shop.xiaoyishi.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import shop.xiaoyishi.entity.Post;
 import shop.xiaoyishi.vo.PostVO;
 
 import java.util.List;
@@ -19,4 +20,7 @@ public interface PostMapper {
 
     @Select("select count(*) from likes where post_id = #{id} and is_deleted = 0")
     Long getLikesById(Long id);
+
+    @Select("select * from posts where post_id = #{postId}")
+    Post getPost(Long postId);
 }

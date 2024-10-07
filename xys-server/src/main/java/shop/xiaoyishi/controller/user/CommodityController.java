@@ -37,15 +37,15 @@ public class CommodityController {
      * @return
      */
     @GetMapping("/commodities")
-    @ApiOperation("查询商品信息")
+    @ApiOperation("查询商品列表")
     public Result commodities(){
-        log.info("查询商品信息");
+        log.info("查询商品列表");
         List<CommodityVO> commodities = commodityService.getList();
         return Result.success(commodities);
     }
 
     /**
-     * 查询商品列表
+     * 添加商品
      * @return
      */
     @PostMapping("/addCommodity")

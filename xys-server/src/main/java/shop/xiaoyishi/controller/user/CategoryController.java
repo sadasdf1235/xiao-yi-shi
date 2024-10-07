@@ -21,7 +21,7 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @ApiOperation("首页分类数据")
+    @ApiOperation("一级分类数据")
     @GetMapping("/firstCategory")
     public Result<List<CategoryVO>> homeCategory(){
         log.info("获取一级分类");

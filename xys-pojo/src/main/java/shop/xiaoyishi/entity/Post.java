@@ -17,4 +17,6 @@ public class Post {
     private LocalDateTime createTime;
 
     private LocalDateTime updateTime;
+
+    private Integer isDeleted; // 0: 未删, 1: 删除
 }

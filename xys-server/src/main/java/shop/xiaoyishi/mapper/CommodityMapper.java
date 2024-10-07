@@ -37,4 +37,7 @@ public interface CommodityMapper {
     void addCommodity(Commodity commodity);
 
     void addCommodityImages(@Param("images")List<String> images, @Param("id")Long id);
+
+    @Select("select * from commodity where commodity_id = #{id}")
+    Commodity getCommodity(Long commodityId);
 }

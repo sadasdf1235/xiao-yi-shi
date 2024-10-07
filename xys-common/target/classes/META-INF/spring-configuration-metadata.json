@@ -51,8 +51,7 @@
     {
       "name": "xiaoyishi.jwt.admin-ttl",
       "type": "java.lang.Long",
-      "sourceType": "shop.xiaoyishi.properties.JwtProperties",
-      "defaultValue": 0
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties"
     },
     {
       "name": "xiaoyishi.jwt.user-secret-key",
@@ -68,8 +67,7 @@
     {
       "name": "xiaoyishi.jwt.user-ttl",
       "type": "java.lang.Long",
-      "sourceType": "shop.xiaoyishi.properties.JwtProperties",
-      "defaultValue": 0
+      "sourceType": "shop.xiaoyishi.properties.JwtProperties"
     },
     {
       "name": "xiaoyishi.wechat.api-v3-key",

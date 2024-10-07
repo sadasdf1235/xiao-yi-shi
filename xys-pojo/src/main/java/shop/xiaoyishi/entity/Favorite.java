@@ -2,13 +2,12 @@ package shop.xiaoyishi.entity;
 
 import java.time.LocalDateTime;
 
-public class Category {
-    // 主键
-    private long categoryId;
-    // 父级分类id
-    private long parentCategoryId;
-    // 分类名
-    private String categoryName;
+public class Favorite {
+    private Long favoriteId;
+    private Long userId;
+    private Long commodityId;
+    // 帖子id
+    private Long postId;
     // 创建时间
     private LocalDateTime createTime;
     // 修改时间

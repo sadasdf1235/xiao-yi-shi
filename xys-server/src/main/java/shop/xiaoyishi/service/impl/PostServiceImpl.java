@@ -2,6 +2,7 @@ package shop.xiaoyishi.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import shop.xiaoyishi.entity.Post;
 import shop.xiaoyishi.mapper.FollowMapper;
 import shop.xiaoyishi.mapper.PostMapper;
 import shop.xiaoyishi.service.PostService;
@@ -32,5 +33,10 @@ public class PostServiceImpl implements PostService {
             postVO.setFans(Long.valueOf(countBean));
         }
         return postVOS;
+    }
+
+    @Override
+    public Post getPost(Long postId) {
+        return postMapper.getPost(postId);
     }
 }

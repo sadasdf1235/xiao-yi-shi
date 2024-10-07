@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/xiao-yi-shi.iml" filepath="$PROJECT_DIR$/xiao-yi-shi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xys-server/xys-server.iml" filepath="$PROJECT_DIR$/xys-server/xys-server.iml" />
-    </modules>
-  </component>
-</project>

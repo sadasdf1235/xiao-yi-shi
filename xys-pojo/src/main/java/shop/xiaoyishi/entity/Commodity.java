@@ -29,4 +29,6 @@ public class Commodity {
     private LocalDateTime updateTime;
 
     private Integer isDeleted;
+
+    private Integer isSold;
 }

@@ -30,5 +30,5 @@ public class User implements Serializable {
     private Long updateUser; // 最后修改人ID
     private LocalDateTime createTime; // 创建时间
     private LocalDateTime updateTime; // 更新时间
-//    private Integer isDeleted; // 0: 未删, 1: 删除
+    private Integer isDeleted; // 0: 未删, 1: 删除
 }

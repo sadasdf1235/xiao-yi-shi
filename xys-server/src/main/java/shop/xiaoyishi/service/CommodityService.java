@@ -20,5 +20,16 @@ public interface CommodityService {
      */
     List<CommodityVO> getList();
 
+    /**
+     * 添加商品
+     * @param commodityDTO
+     */
     void addCommodity(CommodityDTO commodityDTO);
+
+    /**
+     * 获取商品详情
+     * @param commodityId
+     * @return
+     */
+    Commodity getCommodity(Long commodityId);
 }

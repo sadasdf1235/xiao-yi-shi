@@ -83,6 +83,7 @@ public class UserController {
     @GetMapping("/userinfo")
     @ApiOperation("查询用户信息")
     public Result userInfo(Long userId){
+        // TODO 优化
         log.info("查询用户信息 {}",userId);
 
         UserVO userVO = new UserVO();
