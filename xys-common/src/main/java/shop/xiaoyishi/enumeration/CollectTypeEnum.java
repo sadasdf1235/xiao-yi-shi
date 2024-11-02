@@ -1,6 +1,6 @@
 package shop.xiaoyishi.enumeration;
 
-public enum TypeEnum {
+public enum CollectTypeEnum {
     ALL,
     COMMODITY,
     POST;

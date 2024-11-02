@@ -9,24 +9,24 @@ import java.util.List;
 
 @Mapper
 public interface PostMapper {
-    @Select("select count(*) from posts where user_id = #{userId}")
+    @Select("select count(user_id) from posts where user_id = #{userId} and is_deleted = 0")
     Integer countPost(Long userId);
 
-    @Select("select p.*,u.username,u.avatar from users u inner join posts p on u.user_id = p.user_id where p.is_deleted = 0")
+    @Select("select p.post_id,p.user_id,p.title,p.description,p.create_time,p.update_time,p.is_deleted,u.username,u.avatar from users u inner join posts p on u.user_id = p.user_id where p.is_deleted = 0 and is_deleted = 0")
     List<PostVO> postList();
 
-    @Select("select p.*,u.username,u.avatar from users u inner join posts p on u.user_id = p.user_id where p.is_deleted = 0 and p.user_id = #{id}")
+    @Select("select p.post_id,p.user_id,p.title,p.description,p.create_time,p.update_time,p.is_deleted,u.username,u.avatar from users u inner join posts p on u.user_id = p.user_id where p.is_deleted = 0 and p.user_id = #{id} and is_deleted = 0")
     List<PostVO> postListById(Long id);
 
-    @Select("select p.*,u.username,u.avatar from users u inner join posts p on u.user_id = p.user_id where p.is_deleted = 0 and p.post_id = #{id}")
+    @Select("select p.post_id,p.user_id,p.title,p.description,p.create_time,p.update_time,p.is_deleted,u.username,u.avatar from users u inner join posts p on u.user_id = p.user_id where p.is_deleted = 0 and p.post_id = #{id} and is_deleted = 0")
     PostVO postById(Long id);
 
     @Select("select image_url from post_images where post_id = #{id} and is_deleted = 0")
     List<String> getImagesById(Long id);
 
-    @Select("select count(*) from likes where post_id = #{id} and is_deleted = 0")
+    @Select("select count(post_id) from likes where post_id = #{id} and is_deleted = 0")
     Long getLikesById(Long id);
 
-    @Select("select * from posts where post_id = #{postId}")
+    @Select("select post_id,user_id,title,description,create_time,update_time,is_deleted from posts where post_id = #{postId} and is_deleted = 0")
     Post getPost(Long postId);
 }

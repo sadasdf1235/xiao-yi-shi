@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CollectVO {
+public class HistoryVO {
     private Long id;
     private Long userId;
     private Integer type;

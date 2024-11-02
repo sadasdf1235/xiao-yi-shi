@@ -12,9 +12,18 @@ public interface CollectService {
      */
     Integer countCollect(Long userId);
 
+    /**
+     * 商品收藏列表
+     */
     List<CommodityVO> commodities(Long userId);
 
+    /**
+     * 帖子收藏列表
+     */
     List<PostVO> posts(Long userId);
 
+    /**
+     * 收藏列表
+     */
     List<CollectVO> collectList(Long userId, Integer type);
 }
